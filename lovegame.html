@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE GAME</title>
+    <link rel="stylesheet" href="lovegame.css">
+</head>
+
+<body >
+    
+     <center> 
+        <H1>LOVE CALCULATOR RESULT</H1>
+    <div class="content">
+        <p>The Love Calculator provides a score from 0% to 100% that is meant to be an indication of a match in terms of
+            love, based on the names of two people. The higher the percentage, the better the match.
+
+            Note that like all other love calculators on the Internet, this calculator is intended for amusement only
+            rather than as a real indication of love. Please follow your heart instead of the results of this calculator
+            when considering love.
+            <h3>FIND LOVE % BETWEEN</h3>
+
+        </p>
+    </div>
+    <form >
+        <label for="name">YOUR NAME</label><br>
+        <input type="text" id="your"><br>
+        <br>
+        <label for="name">CRUSH NAME</label><br>
+        <input type="text" id="crush"><br>
+        </center> 
+        <button type="button" onclick="love() " class="button">Click me!</button>
+    </form>
+    
+<script>
+  function love()
+  {
+    var t=document.getElementById('your').value;
+   var n= document.getElementById('crush').value;
+   if(t=="")
+   alert("Please enter your name");
+   else if(t.length<=2)
+   alert("please enter name more than two character");
+   else if(!isNaN(t))
+   alert("Please enter Character");
+  else if(n=="")
+   alert("Please enter your name");
+   else if(n.length<=2)
+   alert("please enter name more than two character");
+   else if(!isNaN(n))
+   alert("Please enter Character");
+   else
+   {
+    var s=Math.random()*100;
+    s=Math.floor(s);
+    alert("LOVE PERCENTAGE " +" " +s+"%");
+   }
+
+  }  
+</script>
+
+</body>
+
+</html>
